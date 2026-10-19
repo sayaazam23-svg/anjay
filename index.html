@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANJAY HALLOWEEN</title>
+<style>
+body{margin:0;background:#0a0a0a;color:#ff7a00;overflow:hidden;font-family:sans-serif;height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column}
+h1{font-size:50px;text-shadow:0 0 20px orange;animation:kedip 1s infinite}
+.pumpkin{font-size:120px;cursor:pointer;animation:float 2s infinite;filter:drop-shadow(0 0 20px orange)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+@keyframes kedip{0%,100%{opacity:1}50%{opacity:0.5}}
+.bats{position:absolute;top:0;left:0;width:100%;font-size:30px;animation:terbang 6s linear infinite}
+@keyframes terbang{from{transform:translateX(-100%)}to{transform:translateX(200%)}}
+p{color:#fff;opacity:0.7}
+</style>
+</head>
+<body>
+<div class="bats">🦇 🦇 🦇 🦇 🦇</div>
+<h1>🎃 ANJAY 🎃</h1>
+<div class="pumpkin" onclick="this.innerHTML='👻'; document.body.style.background='#330044'; alert('BOO! KENA PRANK HALLOWEEN!')">🎃</div>
+<p>klik labunya, jangan kaget</p>
+<audio id="sound" src="https://www.soundjay.com/misc/sounds/horror-scream-01.mp3"></audio>
+<script>
+document.querySelector('.pumpkin').addEventListener('click',()=>{
+document.getElementById('sound').play()
+})
+</script>
+</body>
+</html>
